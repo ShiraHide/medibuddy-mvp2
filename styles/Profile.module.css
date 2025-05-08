@@ -1,0 +1,265 @@
+.pageContainer {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--Background-Default-Default);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-31xl) var(--padding-6xl);
+  box-sizing: border-box;
+  gap: var(--gap-xs);
+}
+
+.header {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-0);
+  margin-bottom: 2rem;
+}
+
+.logomedibuddyIcon {
+  width: 180px;
+  height: 50px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.profileView {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profileInfo {
+  margin-bottom: 2rem;
+}
+
+.profileInfo p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.profileInfo strong {
+  color: #333;
+  margin-right: 0.5rem;
+  display: inline-block;
+  min-width: 80px;
+}
+
+.form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #0070f3;
+  box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.1);
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.submitButton,
+.editButton,
+.cancelButton {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border: none;
+  flex: 1;
+  min-width: 120px;
+}
+
+.submitButton,
+.editButton {
+  background-color: #0070f3;
+  color: white;
+}
+
+.submitButton:hover,
+.editButton:hover {
+  background-color: #0051a8;
+}
+
+.cancelButton {
+  background-color: #f3f3f3;
+  color: #333;
+}
+
+.cancelButton:hover {
+  background-color: #e3e3e3;
+}
+
+.submitButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error {
+  background: #fff3f3;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  color: #d32f2f;
+  margin: 1rem;
+}
+
+.error p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  word-break: break-word;
+}
+
+.retryButton {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  min-width: 120px;
+}
+
+.retryButton:hover {
+  background-color: #b71c1c;
+}
+
+/* モバイル対応のメディアクエリ */
+@media screen and (max-width: 768px) {
+  .pageContainer {
+    padding: 1rem;
+  }
+
+  .header {
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .logomedibuddyIcon {
+    width: 140px;
+    height: 40px;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .profileView,
+  .form {
+    padding: 1rem;
+  }
+
+  .profileInfo p {
+    font-size: 1rem;
+  }
+
+  .profileInfo strong {
+    min-width: 70px;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .submitButton,
+  .editButton,
+  .cancelButton,
+  .retryButton {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* 小さいモバイル画面用のメディアクエリ */
+@media screen and (max-width: 480px) {
+  .pageContainer {
+    padding: 0.5rem;
+  }
+
+  .header {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .logomedibuddyIcon {
+    width: 120px;
+    height: 35px;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .profileInfo p {
+    font-size: 0.9rem;
+  }
+
+  .profileInfo strong {
+    min-width: 60px;
+  }
+} 

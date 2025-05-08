@@ -1,0 +1,10 @@
+.buttonLogin {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--Text-Default-Default);
+  font-family: var(--font-inter);
+}

@@ -1,0 +1,48 @@
+.label {
+  color: var(--Text-Default-Default);
+}
+.description,
+.label {
+  width: 240px;
+  position: relative;
+  line-height: 140%;
+}
+.textarea {
+  border: var(--Stroke-Border) solid var(--Border-Default-Default);
+  background-color: var(--Background-Default-Default);
+  height: auto;
+  width: auto;
+  outline: 0;
+  align-self: stretch;
+  border-radius: var(--Radius-200);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--Space-300) var(--Space-400);
+  font-family: var(--font-inter);
+  font-size: var(--font-size-base);
+  color: var(--color-darkgray-100);
+  min-width: 240px;
+  min-height: 80px;
+}
+.hint {
+  width: 240px;
+  position: relative;
+  line-height: 140%;
+}
+.textareaConditions {
+  align-self: stretch;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--Space-200);
+  text-align: left;
+  font-size: var(--Body-Size-Medium);
+  color: var(--Text-Default-Secondary);
+  font-family: var(--font-inter);
+}

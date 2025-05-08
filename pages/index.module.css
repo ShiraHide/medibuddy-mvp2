@@ -1,0 +1,98 @@
+.logomedibuddyIcon {
+  width: 180px;
+  max-height: 100%;
+  object-fit: cover;
+}
+.buttonLoginWrapper {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.header {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-0);
+}
+.h1 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 120%;
+  font-weight: 700;
+  font-family: inherit;
+}
+.copyMain {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs);
+}
+.p {
+  margin: 0;
+}
+.medibuddy {
+  align-self: stretch;
+  position: relative;
+  line-height: 200%;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--M3-black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.copies,
+.copySub {
+  align-self: stretch;
+  align-items: flex-start;
+}
+.copySub {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-3xs);
+  font-size: var(--font-size-xs);
+}
+.copies {
+  gap: var(--gap-xs);
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--M3-black);
+  font-family: var(--font-inter);
+}
+.buttonBeforeexamination,
+.copies,
+.toppage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.buttonBeforeexamination {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  align-self: stretch;
+  align-items: center;
+}
+.toppage {
+  width: 100%;
+  height: 852px;
+  position: relative;
+  background-color: var(--Background-Default-Default);
+  overflow: hidden;
+  align-items: flex-start;
+  padding: var(--padding-31xl) var(--padding-6xl);
+  box-sizing: border-box;
+  gap: var(--gap-xs);
+  line-height: normal;
+  letter-spacing: normal;
+}

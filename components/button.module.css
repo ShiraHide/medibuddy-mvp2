@@ -1,0 +1,24 @@
+.button {
+  position: relative;
+  line-height: 100%;
+}
+.buttonLogin {
+  align-self: stretch;
+  width: 75px;
+  border-radius: var(--Radius-200);
+  background-color: var(--Background-Brand-Tertiary);
+  border: var(--Stroke-Border) solid var(--Border-Neutral-tertiary);
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--Space-200);
+  gap: var(--Space-200);
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--Text-Default-Default);
+  font-family: var(--font-inter);
+}

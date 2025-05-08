@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap");
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* Fonts */
+  --font-inter: Inter;
+  --font-noto-serif: "Noto Serif";
+
+  /* font sizes */
+  --font-size-xs: 12px;
+  --font-size-base: 16px;
+  --font-size-5xl: 24px;
+
+  /* Colors */
+  --color-darkgray-100: #b3b3b3;
+
+  /* Gaps */
+  --gap-0: 0px;
+  --gap-xs: 12px;
+
+  /* Paddings */
+  --padding-3xs: 10px;
+  --padding-5xl: 24px;
+  --padding-6xl: 25px;
+  --padding-31xl: 50px;
+
+  /* Border radiuses */
+  --br-81xl: 100px;
+
+  /* Figma Variables */
+
+  /* Color Variables */
+  --Background-Brand-Tertiary: #f5f5f5;
+  --Background-Default-Default: #fff;
+  --Border-Default-Default: #d9d9d9;
+  --Border-Neutral-tertiary: #b1b1b1;
+  --Icon-Default-Default: #1e1e1e;
+  --M3-black: #000;
+  --M3-sys-light-outline: #79747e;
+  --Schemes-Outline: #79747e;
+  --Text-Default-Default: #1e1e1e;
+  --Text-Default-Secondary: #757575;
+
+  /* Number Variables */
+  --Stroke-Border: 1px;
+  --Space-200: 8px;
+  --Radius-200: 8px;
+  --Space-300: 12px;
+  --Body-Size-Medium: 16px;
+  --Space-400: 16px;
+  --Body-Font-Weight-Regular: 400;
+}

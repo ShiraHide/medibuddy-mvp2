@@ -41,7 +41,7 @@
   font-family: var(--font-inter);
 }
 
-.recordexamination {
+.recordExamination {
   width: 100%;
   min-height: 100vh;
   position: relative;
@@ -49,23 +49,32 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: var(--padding-31xl) var(--padding-6xl);
+  align-items: center;
+  padding: 2rem;
   box-sizing: border-box;
-  gap: var(--gap-xs);
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .recordingStatus {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.recordingText {
-  color: #ff0000;
-  font-size: 24px;
+.recordingIndicator {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
   font-weight: bold;
+  color: #666;
+}
+
+.recordingIndicator.recording {
+  color: #ff0000;
   animation: blink 1s infinite;
 }
 
@@ -76,36 +85,77 @@
 }
 
 .transcriptionContainer {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f8f9fa;
+  background: white;
   border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.transcriptionText {
-  font-size: 16px;
-  line-height: 1.6;
+.transcriptionContainer h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  color: var(--Text-Default-Default);
 }
 
-.transcriptionText p {
-  margin: 10px 0;
-  padding: 8px;
+.conversationList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.conversationItem {
+  padding: 0.8rem;
+  background: #f5f5f5;
   border-radius: 4px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--Text-Default-Default);
+  animation: fadeIn 0.3s ease-in;
 }
 
-.transcriptionText p:nth-child(odd) {
-  background-color: #e9ecef;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .stopButton {
+  display: block;
   width: 100%;
   max-width: 300px;
-  margin: 20px auto;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  border: 0;
-  padding: 0;
-  background-color: transparent;
+  transition: background-color 0.2s;
+}
+
+.stopButton:hover {
+  background-color: #ff2222;
+}
+
+@media screen and (max-width: 768px) {
+  .recordExamination {
+    padding: 1rem;
+  }
+
+  .transcriptionContainer {
+    padding: 1rem;
+  }
+
+  .conversationList {
+    max-height: 300px;
+  }
+
+  .conversationItem {
+    font-size: 0.85rem;
+  }
 } 

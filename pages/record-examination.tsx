@@ -17,6 +17,22 @@ const RecordExamination: NextPage = () => {
 
   // 録音状態の管理
   const [isRecording, setIsRecording] = useState(true);
+  const [conversations, setConversations] = useState<string[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // ダミーの会話データ
+  const dummyConversations = [
+    "医師：今日はどうされましたか？",
+    "患者：昨日から熱が出て、咳も出るようになりました。",
+    "医師：体温は測られましたか？",
+    "患者：はい、38.5度ありました。",
+    "医師：喉の痛みはありますか？",
+    "患者：はい、少し痛みがあります。",
+    "医師：風邪の症状ですね。安静にして、水分を十分に取ってください。",
+    "医師：処方箋を出しますので、薬局で受け取ってください。",
+    "患者：ありがとうございます。",
+    "医師：3日間様子を見て、症状が悪化する場合は再受診してください。"
+  ];
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -59,9 +75,27 @@ const RecordExamination: NextPage = () => {
     alert("ログアウトしました（ダミー）");
   };
 
-  const stopRecording = () => {
+  // 会話を自動的に追加する関数
+  const addConversation = useCallback(() => {
+    if (isRecording && currentIndex < dummyConversations.length) {
+      setConversations(prev => [...prev, dummyConversations[currentIndex]]);
+      setCurrentIndex(prev => prev + 1);
+    }
+  }, [isRecording, currentIndex]);
+
+  // 録音停止時の処理
+  const handleStopRecording = () => {
     setIsRecording(false);
+    router.push("/during-medical-examination");
   };
+
+  // 定期的に会話を追加
+  useEffect(() => {
+    if (isRecording) {
+      const interval = setInterval(addConversation, 2000); // 2秒ごとに会話を追加
+      return () => clearInterval(interval);
+    }
+  }, [isRecording, addConversation]);
 
   return (
     <div className={styles.recordexamination}>
@@ -96,19 +130,21 @@ const RecordExamination: NextPage = () => {
         </div>
       </section>
       <div className={styles.recordingStatus}>
-        {isRecording && <div className={styles.recordingText}>録音中</div>}
-      </div>
-      <div className={styles.transcriptionContainer}>
-        <div className={styles.transcriptionText}>
-          <p>医師: こんにちは。今日はどのような症状でお越しになりましたか？</p>
-          <p>患者: 最近、頭痛が続いていて、特に朝方に強い痛みを感じます。</p>
-          <p>医師: 頭痛の具体的な症状について教えていただけますか？</p>
-          <p>患者: 右側のこめかみ付近がズキズキと痛み、吐き気も伴うことがあります。</p>
-          <p>医師: その症状はどのくらいの期間続いていますか？</p>
-          <p>患者: 約2週間前から始まりました。</p>
+        <div className={`${styles.recordingIndicator} ${isRecording ? styles.recording : ''}`}>
+          録音中
         </div>
       </div>
-      <button className={styles.stopButton} onClick={stopRecording}>
+      <div className={styles.transcriptionContainer}>
+        <h2>診察のやりとり</h2>
+        <div className={styles.conversationList}>
+          {conversations.map((conversation, index) => (
+            <div key={index} className={styles.conversationItem}>
+              {conversation}
+            </div>
+          ))}
+        </div>
+      </div>
+      <button className={styles.stopButton} onClick={handleStopRecording}>
         <Button1
           showIcon={false}
           state="Enabled"

@@ -1,0 +1,37 @@
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-0);
+  margin-bottom: 2rem;
+  padding: 1rem var(--padding-6xl);
+  background-color: var(--Background-Default-Default);
+  box-sizing: border-box;
+}
+
+.logomedibuddyIcon {
+  width: 180px;
+  height: 50px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .logomedibuddyIcon {
+    width: 140px;
+    height: 40px;
+  }
+} 

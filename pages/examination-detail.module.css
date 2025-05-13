@@ -1,0 +1,165 @@
+.examinationDetail {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--Background-Default-Default);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-31xl) var(--padding-6xl);
+  box-sizing: border-box;
+  gap: var(--gap-xs);
+}
+
+.header {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-0);
+  margin-bottom: 2rem;
+}
+
+.logomedibuddyIcon {
+  width: 180px;
+  height: 50px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.breadcrumb {
+  margin-bottom: 2rem;
+  color: var(--Text-Default-Secondary);
+  font-size: 0.9rem;
+}
+
+.breadcrumb span {
+  cursor: pointer;
+}
+
+.breadcrumb span:hover {
+  color: var(--Text-Default-Default);
+}
+
+.separator {
+  margin: 0 0.5rem;
+  cursor: default;
+}
+
+.detailCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.detailCard .header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--Border-Default-Default);
+}
+
+.detailCard h1 {
+  font-size: 1.8rem;
+  color: var(--Text-Default-Default);
+  margin: 0;
+}
+
+.hospital {
+  color: var(--Text-Default-Secondary);
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.summary {
+  margin-bottom: 2rem;
+}
+
+.summary h2 {
+  font-size: 1.4rem;
+  color: var(--Text-Default-Default);
+  margin-bottom: 1rem;
+}
+
+.details {
+  display: grid;
+  gap: 2rem;
+}
+
+.section {
+  background: var(--Background-Brand-Tertiary);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.section h3 {
+  font-size: 1.2rem;
+  color: var(--Text-Default-Default);
+  margin: 0 0 1rem 0;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--Border-Default-Default);
+}
+
+.section li:last-child {
+  border-bottom: none;
+}
+
+.transcriptionSection {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--Border-Default-Default);
+}
+
+.transcriptionButton {
+  background-color: var(--Background-Brand-Tertiary);
+  border: 1px solid var(--Border-Default-Default);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.transcriptionButton:hover {
+  background-color: var(--Border-Default-Default);
+}
+
+@media screen and (max-width: 768px) {
+  .examinationDetail {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  .detailCard {
+    padding: 1rem;
+  }
+
+  .detailCard h1 {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    padding: 1rem;
+  }
+} 

@@ -1,0 +1,111 @@
+.logomedibuddyIcon {
+  width: 180px;
+  max-height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.header {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-0);
+}
+
+.h1 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 120%;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.copyMain {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs);
+}
+
+.copies {
+  align-self: stretch;
+  align-items: flex-start;
+  gap: var(--gap-xs);
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--M3-black);
+  font-family: var(--font-inter);
+}
+
+.recordexamination {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--Background-Default-Default);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-31xl) var(--padding-6xl);
+  box-sizing: border-box;
+  gap: var(--gap-xs);
+}
+
+.recordingStatus {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.recordingText {
+  color: #ff0000;
+  font-size: 24px;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.transcriptionContainer {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.transcriptionText {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.transcriptionText p {
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.transcriptionText p:nth-child(odd) {
+  background-color: #e9ecef;
+}
+
+.stopButton {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+} 

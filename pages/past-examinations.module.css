@@ -1,0 +1,121 @@
+.logomedibuddyIcon {
+  width: 180px;
+  max-height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.header {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-0);
+}
+
+.h1 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 120%;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.copyMain {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs);
+}
+
+.copies {
+  align-self: stretch;
+  align-items: flex-start;
+  gap: var(--gap-xs);
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--M3-black);
+  font-family: var(--font-inter);
+}
+
+.pastexaminations {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--Background-Default-Default);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-31xl) var(--padding-6xl);
+  box-sizing: border-box;
+  gap: var(--gap-xs);
+}
+
+.examinationList {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.examinationItem {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.examinationContent {
+  flex: 1;
+}
+
+.examinationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.date {
+  font-size: 14px;
+  color: #666;
+}
+
+.hospital {
+  font-size: 14px;
+  color: #0070f3;
+  font-weight: 500;
+}
+
+.summary {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.shareButton {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.shareButton:hover {
+  background-color: #f5f5f5;
+} 

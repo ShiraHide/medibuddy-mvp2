@@ -55,6 +55,14 @@ const TopPage: NextPage = () => {
     router.push("/before-medical-examination");
   }, [router]);
 
+  const onButtonDuringExaminationContainerClick = useCallback(() => {
+    router.push("/during-medical-examination");
+  }, [router]);
+
+  const onButtonPastExaminationsContainerClick = useCallback(() => {
+    router.push("/past-examinations");
+  }, [router]);
+
   return (
     <div className={styles.toppage}>
       <div className={styles.header}>
@@ -245,6 +253,9 @@ const TopPage: NextPage = () => {
           state="Enabled"
           style="Outlined"
           labelText="診察中のサポート"
+          onButtonBeforeExaminationContainerClick={
+            onButtonDuringExaminationContainerClick
+          }
         />
       </button>
       <button className={styles.buttonBeforeexamination}>
@@ -253,6 +264,9 @@ const TopPage: NextPage = () => {
           state="Enabled"
           style="Outlined"
           labelText="過去の診察内容"
+          onButtonBeforeExaminationContainerClick={
+            onButtonPastExaminationsContainerClick
+          }
         />
       </button>
     </div>
